@@ -1,6 +1,9 @@
 package ch2;
 
 public class Ch2_6 {
+    /**
+     * A point represents a point in the plane.
+     */
     private static class Point {
         private double x, y;
         Point() {
@@ -22,10 +25,20 @@ public class Ch2_6 {
             return y;
         }
 
+        /**
+         * Moves the point along given direction.
+         * @param dx move distance along x direction.
+         * @param dy move distance along y direction.
+         */
         public void translate(double dx, double dy) {
             x += dx;
             y += dy;
         }
+
+        /**
+         * Scale both coordinates with a given factor.
+         * @param s scaling factor
+         */
         public void scale(double s) {
             x *= s;
             y *= s;
