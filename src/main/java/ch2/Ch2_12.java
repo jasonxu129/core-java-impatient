@@ -17,16 +17,20 @@ looks into the current directory if the "." directory is on the class path. If y
 path set, this is not a problem - the default class path consists of the "." directory. but if
 you have set the class path and forgot to include the "." directory, your programs will compile
 without error but won't run.)
- */
+
+*/
+
 import java.util.Map;
-import com.opencsv.CSVReaderHeaderAware;
+// import com.opencsv.CSVReaderHeaderAware;
 import java.io.FileReader;
 
 public class Ch2_12 {
     public static void main(String[] args) throws Exception {
+        /*
         Map<String, String> values = new CSVReaderHeaderAware(new FileReader("test.csv")).readMap();
         for (Map.Entry entry : values.entrySet()) {
             System.out.println("key: " + entry.getKey() + ", Values: " + entry.getValue());
         }
+        */
     }
 }
