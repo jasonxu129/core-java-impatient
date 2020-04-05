@@ -10,12 +10,12 @@ import java.util.List;
  */
 public class Ch4_8 {
     public static void printClassPrepresentations(Class<?> c) {
-        System.out.println(c.getCanonicalName());
-        System.out.println(c.getSimpleName());
-        System.out.println(c.getTypeName());
-        System.out.println(c.getName());
-        System.out.println(c.toString());
-        System.out.println(c.toGenericString());
+        System.out.println("Canonical name: " + c.getCanonicalName());
+        System.out.println("Simple name: " + c.getSimpleName());
+        System.out.println("Type name: " + c.getTypeName());
+        System.out.println("Name: " + c.getName());
+        System.out.println("toString: " + c.toString());
+        System.out.println("toGenericString: " + c.toGenericString());
     }
 
     public static class Test {
