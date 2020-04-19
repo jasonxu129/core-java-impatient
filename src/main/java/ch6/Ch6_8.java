@@ -19,17 +19,11 @@ public class Ch6_8 {
         }
 
         public E min() {
-            if (first.compareTo(second) < 0) {
-                return first;
-            }
-            return second;
+            return first.compareTo(second) < 0 ? first : second;
         }
 
         public E max() {
-            if (first.compareTo(second) > 0) {
-                return first;
-            }
-            return second;
+            return first.compareTo(second) > 0 ? first : second;
         }
     }
 

@@ -1,9 +1,12 @@
 package ch6;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Ch6_10 {
     public static <E extends Comparable<? super E>> E min(E[] elements) {
+        return Collections.min(Arrays.asList(elements));
+        /*
         if (elements.length == 0) {
             return null;
         }
@@ -15,9 +18,13 @@ public class Ch6_10 {
             }
         }
         return currMin;
+        */
+
     }
 
     public static <E extends Comparable<? super E>> E max(E[] elements) {
+        return Collections.max(Arrays.asList(elements));
+        /*
         if (elements.length == 0) {
             return null;
         }
@@ -29,6 +36,7 @@ public class Ch6_10 {
             }
         }
         return currMax;
+         */
     }
 
     public static void main(String[] args) {
