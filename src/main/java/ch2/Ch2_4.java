@@ -1,7 +1,5 @@
 package ch2;
 
-import org.omg.CORBA.IntHolder;
-
 public class Ch2_4 {
     public static void main(String[] args) {
         IntHolder a = new IntHolder(3);
@@ -15,6 +13,14 @@ public class Ch2_4 {
         System.out.printf("Value of int a & b: %d, %d\n", ia, ib);
         cantSwap(ia, ib);
         System.out.printf("Value of int a & b: %d, %d\n", ia, ib);
+    }
+
+    public static class IntHolder {
+        public IntHolder(int value) {
+            this.value = value;
+        }
+
+        int value;
     }
 
     public static void swap(IntHolder a, IntHolder b) {
