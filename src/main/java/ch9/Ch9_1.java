@@ -20,7 +20,7 @@ public class Ch9_1 {
 
     public static void copyStreamWithFile(
             InputStream in, OutputStream out) throws IOException {
-        Path path = Paths.get("tmp_file");
+        Path path = Files.createTempFile("tmp", "txt");
         Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
         Files.copy(path, out);
     }
