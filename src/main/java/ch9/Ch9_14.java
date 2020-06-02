@@ -26,19 +26,15 @@ public class Ch9_14 {
                 new Point(10, 12.5)};
 
         Path path = Paths.get("points.out");
-        try {
-            try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path))) {
+        try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path))) {
                 out.writeObject(points);
-            }
         } catch (IOException ex) {
             ex.printStackTrace();
         }
 
-        try {
-            try (ObjectInputStream in = new ObjectInputStream(Files.newInputStream(path))) {
+        try (ObjectInputStream in = new ObjectInputStream(Files.newInputStream(path))) {
                 Point[] readPoints = (Point[])in.readObject();
                 System.out.println(Arrays.toString(readPoints));
-            }
         } catch (IOException | ClassNotFoundException ex) {
             ex.printStackTrace();
         }
