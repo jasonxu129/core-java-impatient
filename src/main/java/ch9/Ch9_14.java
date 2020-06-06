@@ -15,7 +15,7 @@ public class Ch9_14 {
             this.y = y;
         }
         public String toString() {
-            return String.format("Point(x: %4.2f, y: %4.2f)", x, y);
+            return String.format("Point{x: %4.2f, y: %4.2f}", x, y);
         }
     }
 
@@ -24,6 +24,7 @@ public class Ch9_14 {
                 new Point(1,3),
                 new Point(2.2, 5.5),
                 new Point(10, 12.5)};
+
 
         Path path = Paths.get("points.out");
         try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path))) {
